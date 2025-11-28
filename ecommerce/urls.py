@@ -17,8 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from debug_toolbar.toolbar import debug_toolbar_urls
+from marketplace import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('products/', views.products_list, name='products')
 ] + debug_toolbar_urls()
 

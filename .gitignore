@@ -32,3 +32,4 @@ venv.bak/
 !.vscode/extensions.json 
 .history
 .vscode/launch.json
+*.txt
