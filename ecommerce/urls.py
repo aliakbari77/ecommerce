@@ -21,6 +21,8 @@ from marketplace import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('products/', views.products_list, name='products')
+    path('products/', views.products_list, name='products'),
+    path('products-list/', views.ProductListView.as_view(), name='products-list'),
+    path('product-detail/<int:pk>/', views.ProductDetailView.as_view(), name='products-detail'),
 ] + debug_toolbar_urls()
 
