@@ -24,5 +24,9 @@ urlpatterns = [
     path('products/', views.products_list, name='products'),
     path('products-list/', views.ProductListView.as_view(), name='products-list'),
     path('product-detail/<int:pk>/', views.ProductDetailView.as_view(), name='products-detail'),
+    path('contact-form/', views.ContactFormView.as_view(), name='contact-form'),
+    path('create-product/', views.ProductCreateFormView.as_view(), name='create-product'),
+    path('update-product/<int:pk>/', views.ProductUpdateFormView.as_view(), name='update-product'),
+    path('delete-product/<int:pk>/', views.ProductDeleteFormView.as_view(), name='delete-product'),
 ] + debug_toolbar_urls()
 

@@ -5,6 +5,9 @@ class Category(models.Model):
     name = models.CharField(max_length=100)
     parent = models.ForeignKey('self', null=True, blank=True, on_delete=models.SET_NULL, related_name='subcategories')
 
+    def __str__(self):
+        return f'{self.name}'
+
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
